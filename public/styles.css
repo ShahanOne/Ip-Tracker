@@ -4,7 +4,9 @@ body{
     background-color: #003C5A;
     overflow-x: hidden;
 }
-
+.main-div{
+    padding: 0;
+}
 .top-heading{
     padding-top: 2%;
     font-family: 'Dancing Script', cursive;
@@ -69,7 +71,11 @@ h4{
     display:none;
 }   
 .map{
-    padding: 35%
+    padding: 44%
     ;
 } 
+body{
+    width: 100%;
+   
+}
 }
