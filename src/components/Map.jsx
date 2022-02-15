@@ -22,7 +22,7 @@ function Map(props){
         map.addControl(new mapboxgl.NavigationControl());
 
         
-    })
+    },[])
    
     
     

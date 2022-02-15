@@ -12,11 +12,6 @@ function Header(props) {
          event.preventDefault();
       }
 
-      
-      
-    
-
-
 
     return <div className="top-portion">
       <center><h1 className="top-heading">IP Adress Tracker</h1></center>  
