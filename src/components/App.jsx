@@ -12,14 +12,16 @@ const [clickState,setClick]= useState(false);
 
 
 function action(ip) {
+  
   setIp(ip)
   setClick(true); 
-
   fetch("https://api.freegeoip.app/json/"+ip+ "?apikey=6f754640-8d68-11ec-90bb-375f23ee0386")
   .then(response => response.json())
   .then(data=> setData(data))
   .catch(err => console.log(err))
 }
+
+
 
   return (
     <div className="main-div container-fluid">
@@ -48,10 +50,7 @@ function action(ip) {
        </div>
        <br/>
        </center>
-      { clickState? <Map long={data.longitude} lat={data.latitude}/>: <Body/>}
-
-       
-       
+        <Map long={data.longitude} lat={data.latitude}/>
        <Footer/>
 
 
@@ -74,3 +73,4 @@ export default App;
 // .then(data=> setClient(data.ip))
 // .catch(err => console.error(err));
 
+ {/* { clickState? <Map long={data.longitude} lat={data.latitude}/>: <Body/>} */}

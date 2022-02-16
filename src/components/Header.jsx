@@ -17,7 +17,7 @@ function Header(props) {
       <center><h1 className="top-heading">IP Adress Tracker</h1></center>  
        <center>
        <form onSubmit={(event)=>{
-               props.action(ip);
+               props.action(ip); 
                event.preventDefault();
             }}>
        <div className="input-group mb-3">
