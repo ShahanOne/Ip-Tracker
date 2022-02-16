@@ -21,7 +21,7 @@ function Header(props) {
                event.preventDefault();
             }}>
        <div className="input-group mb-3">
-           <input name="ipSearched" type="text" className="form-control" onChange={handleChange} value={ip} placeholder="Search for an Ip Address..." aria-label="Recipient's username" aria-describedby="button-addon2"/>
+           <input name="ipSearched" type="text" className="form-control" onChange={handleChange} value={ip} placeholder="Search for an Ip Address or CLick > btn" aria-label="Recipient's username" aria-describedby="button-addon2"/>
            <button className="btn btn-outline-secondary go-btn" type="submit" id="button-addon2"><img src="./images/icon-arrow.svg"/></button>
            
            </div>
