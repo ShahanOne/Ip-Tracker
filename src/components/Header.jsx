@@ -14,7 +14,7 @@ function Header(props) {
 
 
     return <div className="top-portion">
-      <center><h1 className="top-heading">IP Adress Tracker</h1></center>  
+      <center><h1 className="top-heading">IP Address Tracker</h1></center>  
        <center>
        <form onSubmit={(event)=>{
                props.action(ip); 

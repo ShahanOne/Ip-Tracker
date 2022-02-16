@@ -30,7 +30,7 @@ function action(ip) {
        <br/>
     
        <div className="col-lg-3">
-       <h4>  IP Adress</h4>
+       <h4>  IP Address</h4>
          {clickState ? data.ip :"..."}
        </div>
        <div className="col-lg-3">
