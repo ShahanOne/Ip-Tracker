@@ -48,6 +48,9 @@ function action(ip) {
   
        </div>
        <br/>
+       <hr style={
+       {"height":"2px"}
+       }/>
        </center>
         <Map long={data.longitude} lat={data.latitude}/>
        <Footer/>

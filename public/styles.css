@@ -33,6 +33,8 @@ body{
     color: whitesmoke;
     border-radius: 2%;
 }
+
+
 h4{
     color:beige;
 }
@@ -71,9 +73,20 @@ h4{
 #map { position: relative;  width: 100%; height: 500px;}
 
 @media (max-width:1000px) {
-.map-text{
+
+.input-group{
+padding: 1%;
+width: 60%;
+}
+    .map-text{
     display:none;
 }   
+hr{
+    color: #313552;
+    width: 0;
+    }
+
+
 .map{
     padding: 44%
     ;
