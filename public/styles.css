@@ -84,6 +84,8 @@ width: 60%;
 hr{
     color: #313552;
     width: 0;
+    margin: 0;
+    height: 0;
     }
 
 
