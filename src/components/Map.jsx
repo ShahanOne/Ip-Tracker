@@ -19,6 +19,8 @@ setZoom(9);
 setClick(true);
 }
     React.useEffect(async()=>{
+        // eslint-disable-next-line import/no-webpack-loader-syntax
+        mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
         mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhaGFuLW9uZSIsImEiOiJja3puNmZoNDMydjViMnBucmM5N2w5Zjh2In0.yJFj5TqWxqAeVkWBbjG2gw';
         const map = await new mapboxgl.Map({
