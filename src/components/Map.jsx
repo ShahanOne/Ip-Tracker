@@ -1,6 +1,8 @@
 import React,{useEffect, useState} from "react";
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
- 
+
+
+
 
 
 function Map(props){
@@ -17,6 +19,7 @@ setZoom(9);
 setClick(true);
 }
     React.useEffect(async()=>{
+
         mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhaGFuLW9uZSIsImEiOiJja3puNmZoNDMydjViMnBucmM5N2w5Zjh2In0.yJFj5TqWxqAeVkWBbjG2gw';
         const map = await new mapboxgl.Map({
         container: 'map',
