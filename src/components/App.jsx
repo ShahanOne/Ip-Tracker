@@ -62,17 +62,3 @@ function action(ip) {
 
 export default App;
 
-// const [clientIp,setClient] = useState("")
-
-// fetch("https://ip-geolocation-ipwhois-io.p.rapidapi.com/json/", {
-// 	"method": "GET",
-// 	"headers": {
-// 		"x-rapidapi-host": "ip-geolocation-ipwhois-io.p.rapidapi.com",
-// 		"x-rapidapi-key": "c6bc1843a6mshc96159db9c3602ep1da9bajsn85cb252ad25d"
-// 	}
-// })
-// .then(response => response.json())
-// .then(data=> setClient(data.ip))
-// .catch(err => console.error(err));
-
- {/* { clickState? <Map long={data.longitude} lat={data.latitude}/>: <Body/>} */}
