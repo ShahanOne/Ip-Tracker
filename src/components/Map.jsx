@@ -40,7 +40,7 @@ setClick(true);
 
 return <div>
 <center><button className="btn btn-warning btn-map" onClick={showOnMap}>Show on map</button></center> 
- {!isClicked?<div className='map'> <center><h1 className="map-text">Track Ip Address of Anyone , Anywhere in the world </h1></center>  </div> :<div id="map"></div>}
+ {!isClicked?<div className="map"> <center><h1 className="map-text">Track Ip Address of Anyone , Anywhere in the world </h1></center>  </div> :<div id="map"></div>}
  
 </div> 
 }
