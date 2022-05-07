@@ -14,7 +14,9 @@ function action(ip) {
   
   setIp(ip)
   setClick(true); 
-  fetch("https://api.freegeoip.app/json/"+ip+ "?apikey=6f754640-8d68-11ec-90bb-375f23ee0386")
+  fetch("https://api.freegeoip.app/json/"+ip+ "?apikey=6f754640-8d68-11ec-90bb-375f23ee0386", { 
+    mode: 'no-cors' // 'cors' by default
+})
   .then(response => response.json())
   .then(data=> setData(data))
   .catch(err => console.log(err))
