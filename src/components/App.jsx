@@ -14,7 +14,7 @@ function App() {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'c6bc1843a6mshc96159db9c3602ep1da9bajsn85cb252ad25d',
+        'X-RapidAPI-Key': `${process.env.API_KEY}`,
         'X-RapidAPI-Host': 'ip-lookup-by-api-ninjas.p.rapidapi.com',
       },
     };
