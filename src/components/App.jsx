@@ -1,66 +1,71 @@
-import React, { useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import Map from "./Map.jsx";
-
+import React, { useEffect, useState } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import Map from './Map.jsx';
 
 function App() {
   const [data, setData] = React.useState([]);
-const [ip,setIp] = useState("");
-const [clickState,setClick]= useState(false);
+  const [ip, setIp] = useState('');
+  const [clickState, setClick] = useState(false);
 
+  useEffect(() => {
+    const url = `https://ip-lookup-by-api-ninjas.p.rapidapi.com/v1/iplookup?address=${ip}`;
 
-function action(ip) {
-  
-  setIp(ip)
-  setClick(true); 
-  fetch("https://api.freegeoip.app/json/"+ip+ "?apikey=6f754640-8d68-11ec-90bb-375f23ee0386",{
-  mode:'no-cors',
-  })
-  .then(response => response.json())
-  .then(data=> setData(data))
-  .catch(err => console.log(err))
-}
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': 'c6bc1843a6mshc96159db9c3602ep1da9bajsn85cb252ad25d',
+        'X-RapidAPI-Host': 'ip-lookup-by-api-ninjas.p.rapidapi.com',
+      },
+    };
 
+    async function getData() {
+      await fetch(url, options)
+        .then((res) => res.json())
+        .then((json) => setData(json))
+        .catch((err) => console.error('error:' + err));
+    }
+    getData();
+  }, [ip]);
 
-
+  // console.log(data);
+  function action(ip) {
+    setIp(ip);
+    setClick(true);
+    // getData();
+  }
   return (
     <div className="main-div container-fluid">
-       <Header action={action}/>
-       <center>
-       <div className="ip-info row container-fluid">
-       <br/>
-    
-       <div className="col-lg-3">
-       <h4>  IP Address</h4>
-         {clickState ? data.ip :"..."}
-       </div>
-       <div className="col-lg-3">
-       <h4>  Location</h4>
-         {clickState ?data.city:"..."} , {clickState ?data.region_code:"..."}
-       </div>
-       <div className="col-lg-3">
-       <h4>  Time Zone</h4>
-         {clickState ?data.time_zone:"..."}
-       </div>
-       <div className="col-lg-3">
-        <h4> Country</h4>
-         {clickState ?data.country_name:"..."}
-       </div>
-  
-       </div>
-       <br/>
-       <hr style={
-       {"height":"2px"}
-       }/>
-       </center>
-        <Map long={data.longitude} lat={data.latitude}/>
-       <Footer/>
+      <Header action={action} />
+      <center>
+        <div className="ip-info row container-fluid">
+          <br />
 
-
+          <div className="col-lg-3">
+            <h4> IP Address</h4>
+            {clickState ? data.address : '...'}
+          </div>
+          <div className="col-lg-3">
+            <h4> Location</h4>
+            {clickState ? data.city : '...'} ,{' '}
+            {clickState ? data.region_code : '...'}
+          </div>
+          <div className="col-lg-3">
+            <h4> Time Zone</h4>
+            {clickState ? data.timezone : '...'}
+          </div>
+          <div className="col-lg-3">
+            <h4> Country</h4>
+            {clickState ? data.country : '...'}
+          </div>
+        </div>
+        <br />
+        <hr style={{ height: '2px' }} />
+      </center>
+      <Map long={data.lon} lat={data.lat} />
+      <Footer />
     </div>
   );
 }
 
 export default App;
-

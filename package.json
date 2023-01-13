@@ -8,10 +8,11 @@
     "fs": "false"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.0",
+    "cors-anywhere": "^0.4.4",
     "dotenv": "^16.0.0",
     "mapbox-gl": "^2.7.0",
     "react": "^17.0.2",
@@ -21,6 +22,7 @@
     "web-vitals": "^2.1.4",
     "worker-loader": "^3.0.8"
   },
+  "proxy": "https://ip-lookup-by-api-ninjas.p.rapidapi.com",
   "scripts": {
     "start": "react-scripts start ",
     "build": "react-scripts build",

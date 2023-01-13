@@ -1,105 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Noto+Serif&display=swap');
 
-body{
-    background-color: #003C5A;
-    overflow-x: hidden;
+body {
+  background-color: #003c5a;
+  overflow-x: hidden;
 }
-.main-div{
-    padding: 0;
+.main-div {
+  padding: 0;
 }
-.top-heading{
-    padding-top: 2%;
-    font-family: 'Dancing Script', cursive;
+.top-heading {
+  padding-top: 2%;
+  font-family: 'Dancing Script', cursive;
 
-    color: blanchedalmond;
-}
-
-.input-group{
-    padding: 1%;
-    width: 30%;
-}
-.go-btn{
-    background-color:#323232;
-}
-.top-portion{
-    padding-bottom: 5%;
-    background-color: #313552;
-    background-position: top;
-    background-position-y: top;
-}
-.ip-info{
-    padding: 1%;
-    width: 80%;
-    color: whitesmoke;
-    border-radius: 2%;
+  color: blanchedalmond;
 }
 
+.input-group {
+  padding: 1%;
+  width: 30%;
+}
+.go-btn {
+  background-color: #323232;
+}
+.top-portion {
+  padding-bottom: 5%;
+  background-color: #313552;
+  background-position: top;
+  background-position-y: top;
+}
+.ip-info {
+  padding: 1%;
+  width: 80%;
+  color: whitesmoke;
+  border-radius: 2%;
+}
 
-h4{
-    color:beige;
+h4 {
+  color: beige;
 }
-.map{
-    background-image: url("images/ef.gif");
-    background-position: center;
-    padding: 13% 5%;
-    margin: 0 2.9%;
-    font-family: 'Dancing Script', cursive;
- 
+.map {
+  background-image: url('images/ef.gif');
+  background-position: center;
+  background-size: 70rem;
+  padding: 15%;
+  font-family: 'Dancing Script', cursive;
 }
-.btn-map{
-    margin: 1% 0;
+.btn-map {
+  margin: 1% 0;
 }
 
 /* img{
     width: 100%;
 } */
-.map-text{
- 
-    font-size: 3.5rem;
-    font-weight:700;
-    color: #D29D2B;
+.map-text {
+  padding: 2% 0;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #d29d2b;
 }
-.footer{
-    background-color: #313552;
-    color: blanchedalmond;
-    padding: 3%;
+.footer {
+  background-color: #313552;
+  color: blanchedalmond;
+  padding: 3%;
 }
 .footer a {
-    font-family: 'Roboto Slab', serif;
-    color: #FFC0D3;
-    text-decoration: none;
+  font-family: 'Roboto Slab', serif;
+  color: #ffc0d3;
+  text-decoration: none;
 }
 
-#map { position: relative;  width: 100%; height: 500px;}
-
-@media (max-width:1000px) {
-
-.input-group{
-padding: 1%;
-width: 60%;
+#map {
+  position: relative;
+  width: 100%;
+  height: 500px;
 }
-    .map-text{
-    display:none;
-}   
-hr{
+
+@media (max-width: 1000px) {
+  .input-group {
+    padding: 1%;
+    width: 60%;
+  }
+  .map-text {
+    display: none;
+  }
+  hr {
     color: #313552;
     width: 0;
     margin: 0;
     height: 0;
-    }
+  }
 
-
-.map{
-    padding: 44%
-    ;
-} 
-body{
+  .map {
+    padding: 44%;
+  }
+  body {
     width: 100%;
-   
-}
+  }
 }
 
 /* .map-container {
     height: 400px;
     } */
-    
